@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial 2 de Canvas</title>
+    <script type="text/javascript">
+        function draw1() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+            var img = new Image();
+            img.onload = function () {
+                ctx.drawImage(img, 0, 0);
+                ctx.beginPath();
+                ctx.moveTo(30, 96);
+                ctx.lineTo(70, 66);
+                ctx.lineTo(103, 76);
+                ctx.lineTo(170, 15);
+                ctx.stroke();
+            };
+            img.src = 'imatges/backdrop.png';
+
+        }
+        function draw2() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+            var img = new Image();
+            img.onload = function () {
+                for (var i = 0; i < 4; i++) {
+                    for (var j = 0; j < 3; j++) {
+                        ctx.drawImage(img, j * 50, i * 38, 50, 38);
+                    }
+                }
+            };
+            img.src = 'imatges/rhino.jpg';
+
+        }
+        function draw3() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+            ctx.drawImage(document.getElementById('source'), 33, 71, 104, 124, 21, 20, 87, 104);
+            // Dibuija el marc
+            ctx.drawImage(document.getElementById('frame'), 0, 0);
+
+        }
+        function draw4() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+            for (var i = 0; i < 6; i++) {
+                for (var j = 0; j < 6; j++) {
+                    ctx.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ',' +
+                        Math.floor(255 - 42.5 * j) + ',0)';
+                    ctx.fillRect(j * 25, i * 25, 25, 25);
+                }
+            }
+
+        }
+        function draw5() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+            for (var i = 0; i < 6; i++) {
+                for (var j = 0; j < 6; j++) {
+                    ctx.strokeStyle = 'rgb(0,' + Math.floor(255 - 42.5 * i) + ',' +
+                        Math.floor(255 - 42.5 * j) + ')';
+                    ctx.beginPath();
+                    ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
+                    ctx.stroke();
+                }
+            }
+
+        }
+        function draw6() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+            ctx.fillStyle = '#FD0';
+            ctx.fillRect(0, 0, 75, 75);
+            ctx.fillStyle = '#6C0';
+            ctx.fillRect(75, 0, 75, 75);
+            ctx.fillStyle = '#09F';
+            ctx.fillRect(0, 75, 75, 75);
+            ctx.fillStyle = '#F30';
+            ctx.fillRect(75, 75, 75, 75);
+            ctx.fillStyle = '#FFF';
+            ctx.globalAlpha = 0.3;
+            // Dibuixar cercles semi transparents
+            for (i = 0; i < 7; i++) {
+                ctx.beginPath();
+                ctx.arc(75, 75, 10 + 10 * i, 0, Math.PI * 2, true);
+                ctx.fill();
+            }
+        }
+        function erase() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+            ctx.clearRect(0, 0, 300, 250);
+        }
+    </script>
+    <style type="text/css">
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="tutorial" width="500" height="300"></canvas>
+    <img id="source" src="imatges/rhino.jpg" width="300" height="227" alt="" style="display:none">
+    <img id="frame" src="imatges/Canvas_picture_frame.png" width="132" height="150" alt="" style="display:none">
+    <br>
+    <button onclick="erase();draw1()">Draw1</button>
+    <button onclick="erase();draw2()">Draw2</button>
+    <button onclick="erase();draw3()">Draw3</button>
+    <button onclick="erase();draw4()">Draw4</button>
+    <button onclick="erase();draw5()">Draw5</button>
+    <button onclick="erase();draw6()">Draw6</button>
+    <button onclick="erase();draw7()">Draw7</button>
+    <button onclick="erase();draw8()">Draw8</button>
+    <button onclick="erase();draw9()">Draw9</button>
+    <button onclick="erase();draw10()">Draw10</button>
+    <button onclick="erase();draw11()">Draw11</button>
+    <button onclick="erase();draw12()">Draw12</button>
+    <br>
+    <button onclick="erase()">Erase</button>
+</body>
+
+</html>
