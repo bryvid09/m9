@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tutorial 3 de Canvas</title>
+    <script type="text/javascript">
+        var pattern = new Image();
+
+        var sun = new Image();
+        var moon = new Image();
+        var earth = new Image();
+        function init() {
+            sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
+            moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
+            earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
+            setInterval(draw2, 100);
+        }
+
+        function dibuja() {
+            pattern.src = './cuadrado.png';
+            let interval = setInterval(draw1, 100);
+            setTimeout(clearInterval, 3000, interval);
+        }
+
+        function draw1() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+            erase();
+            ctx.fillStyle = 'rgba(0,0,0,0.4)';
+            ctx.strokeStyle = 'rgba(0,153,255,0.4)';
+            ctx.save();
+            ctx.translate(150, 150);
+            var time = new Date();
+            ctx.rotate(((2 * Math.PI) / 6) * time.getSeconds() +
+                ((2 * Math.PI) / 6000) * time.getMilliseconds());
+            ctx.translate(0, 28.5);
+            ctx.drawImage(pattern, -3.5, -3.5);
+            ctx.restore();
+
+        }
+        function draw2() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+            ctx.globalCompositeOperation = 'destination-over';
+            ctx.clearRect(0, 0, 300, 300); // clear canvas
+            ctx.fillStyle = 'rgba(0,0,0,0.4)';
+            ctx.strokeStyle = 'rgba(0,153,255,0.4)';
+            ctx.save();
+            ctx.translate(150, 150);
+            // Earth
+            var time = new Date();
+            ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
+            ctx.translate(105, 0);
+            ctx.fillRect(0, -12, 50, 24); // Shadow
+            ctx.drawImage(earth, -12, -12);
+            // Moon
+            ctx.save();
+            ctx.rotate(((2 * Math.PI) / 6) * time.getSeconds() + ((2 * Math.PI) / 6000) * time.getMilliseconds());
+            ctx.translate(0, 28.5);
+            ctx.drawImage(moon, -3.5, -3.5);
+            ctx.restore();
+            ctx.restore();
+            ctx.beginPath();
+            ctx.arc(150, 150, 105, 0, Math.PI * 2, false); // Earth orbit
+            ctx.stroke();
+            ctx.drawImage(sun, 0, 0, 300, 300);
+
+        }
+        function draw3() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+
+        }
+        function draw4() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+
+        }
+        function draw5() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+
+        }
+        function draw6() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+
+        }
+        function draw7() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+
+        }
+        function draw8() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+
+        }
+        function dibuixaEspirograf(ctx, R, r, O) {
+
+        }
+        function draw9() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+
+        }
+        function draw10() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+
+        }
+        function draw11() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+
+        }
+        function draw12() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+
+        }
+        function draw13() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+
+        }
+        function draw14() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+            var sin = Math.sin(Math.PI / 6);
+            var cos = Math.cos(Math.PI / 6);
+            ctx.translate(100, 100);
+            var c = 0;
+            for (var i = 0; i <= 12; i++) {
+                c = Math.floor(255 / 12 * i);
+                ctx.fillStyle = "rgb(" + c + "," + c + "," + c + ")";
+                ctx.fillRect(0, 0, 100, 10);
+                ctx.transform(cos, sin, -sin, cos, 0, 0);
+            }
+
+        }
+        function draw15() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+            ctx.rect(50, 20, 200, 120);
+            ctx.stroke();
+
+            ctx.fillStyle = "red";
+            ctx.fillRect(0, 0, 150, 100);
+
+        }
+
+        function draw16() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+            ctx.rect(50, 20, 200, 120);
+            ctx.stroke();
+            ctx.clip();
+
+            ctx.fillStyle = "red";
+            ctx.fillRect(0, 0, 150, 100);
+
+
+        }
+        function dibuixaEstrelles(ctx, r) {
+            ctx.beginPath()
+            ctx.moveTo(r, 0);
+            for (var i = 0; i < 9; i++) {
+                ctx.rotate(Math.PI / 5);
+                if (i % 2 == 0) {
+                    ctx.lineTo((r / 0.525731) * 0.200811, 0);
+                } else {
+                    ctx.lineTo(r, 0);
+                }
+            }
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        function drawShape(img) {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+
+        }
+        function draw17() {
+            var ctx = document.getElementById('tutorial').getContext('2d');
+            ctx.fillRect(0, 0, 150, 150);
+            ctx.translate(75, 75);
+            // Crear un traç de retall circular
+            ctx.beginPath();
+            ctx.arc(0, 0, 60, 0, Math.PI * 2, true);
+            ctx.clip();
+            // dibuixar el fons
+            var lingrad = ctx.createLinearGradient(0, -75, 0, 75);
+            lingrad.addColorStop(0, '#232256');
+            lingrad.addColorStop(1, '#143778');
+            ctx.fillStyle = lingrad;
+            ctx.fillRect(-75, -75, 150, 150);
+            // dibuixar estrelles
+            for (var j = 1; j < 50; j++) {
+                ctx.save();
+                ctx.fillStyle = '#fff';
+                ctx.translate(75 - Math.floor(Math.random() * 150),
+                    75 - Math.floor(Math.random() * 150));
+                dibuixaEstrelles(ctx, Math.floor(Math.random() * 4) + 2);
+                ctx.restore();
+            }
+
+        }
+        function erase() {
+            var canvas = document.getElementById("tutorial");
+            var ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.strokeStyle = "black";
+            ctx.fillStyle = "black";
+            ctx.globalAlpha = 1;
+        }
+    </script>
+    <style type="text/css">
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="tutorial" width="500" height="300"></canvas>
+    <br>
+    <button onclick="erase();dibuja()">Draw1</button>
+    <button onclick="erase();draw2()">Draw2</button>
+    <button onclick="erase();draw3()">Draw3</button>
+    <button onclick="erase();draw4()">Draw4</button>
+    <button onclick="erase();draw5()">Draw5</button>
+    <button onclick="erase();draw6()">Draw6</button>
+    <button onclick="erase();draw7()">Draw7</button>
+    <button onclick="erase();draw8()">Draw8</button>
+    <br>
+    <button onclick="erase();draw9()">Draw9</button>
+    <button onclick="erase();draw10()">Draw10</button>
+    <button onclick="erase();draw11()">Draw11</button>
+    <button onclick="erase();draw12()">Draw12</button>
+    <button onclick="erase();draw13()">Draw13</button>
+    <button onclick="erase();draw14()">Draw14</button>
+    <button onclick="erase();draw15()">Draw15</button>
+    <button onclick="erase();draw16()">Draw16</button>
+    <button onclick="erase();draw17()">Draw17</button>
+    <br>
+    <button onclick="erase()">Erase</button>
+</body>
+
+</html>
