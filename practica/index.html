@@ -3,18 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./globo.js"></script>
+    <script src="./juego.js"></script>
     <script>
-        window.onload = function(){
-            let globo = new Image();
-            
-        }
+        window.onload = function() {
+            let area = new gameArea();
+            area.start();
+            document.onclick = function(event) {
+                area.removeBallons(event);
+            }
+            document.onkeydown = function(event) {
+                if (event.keyCode == 32 && area.viewStatus == 'start') {                    
+                    area.stop();
+                } else if (event.keyCode == 32 && area.viewStatus == 'stop'){
+                    area.restart();
+                } else if (event.keyCode == 65 && area.viewStatus == 'start') {
+                    area.increaseDifficulty();
+                }
+            }
+        }        
     </script>
 </head>
 <body>
-    <div id="canvas">
-
-    </div>
+    
 </body>
 </html>

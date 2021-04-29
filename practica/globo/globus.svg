@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:export-filename="/Users/gordo/Documents/m9/practica/globo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="globus.svg">
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="bend_path"
+       id="path-effect1001"
+       is_visible="true"
+       lpeversion="1"
+       bendpath="m 137.37442,69.155965 c 0,0 17.50088,26.168764 15.59326,52.775935 -1.40102,19.54117 -17.07915,41.09607 -17.07915,41.09607"
+       prop_scale="0.9201878"
+       scale_y_rel="true"
+       vertical="true"
+       hide_knot="false"
+       bendpath-nodetypes="csc" />
+    <inkscape:path-effect
+       effect="bend_path"
+       id="path-effect977"
+       is_visible="true"
+       lpeversion="1"
+       bendpath="m 194.62347,115.7663 c 0,0 2.09865,26.16877 -16.60397,52.77595 -13.73579,19.54117 -43.83378,41.09607 -43.83378,41.09607"
+       prop_scale="0.9201878"
+       scale_y_rel="true"
+       vertical="true"
+       hide_knot="false"
+       bendpath-nodetypes="csc" />
+    <inkscape:path-effect
+       effect="bend_path"
+       id="path-effect953"
+       is_visible="true"
+       lpeversion="1"
+       bendpath="m 81.800068,41.559707 c 0,0 -21.834202,32.560423 -19.454242,65.666343 1.74792,24.31405 21.308052,51.13368 21.308052,51.13368"
+       prop_scale="0.6919337"
+       scale_y_rel="true"
+       vertical="true"
+       hide_knot="false"
+       bendpath-nodetypes="csc" />
+    <inkscape:path-effect
+       effect="bend_path"
+       id="path-effect929"
+       is_visible="true"
+       lpeversion="1"
+       bendpath="m 101.08192,53.478727 c 0,0 -21.834202,26.168764 -19.454242,52.775943 1.74792,19.54117 21.308052,41.09607 21.308052,41.09607"
+       prop_scale="0.9201878"
+       scale_y_rel="true"
+       vertical="true"
+       hide_knot="false"
+       bendpath-nodetypes="csc" />
+    <inkscape:path-effect
+       effect="bend_path"
+       id="path-effect906"
+       is_visible="true"
+       lpeversion="1"
+       bendpath="m 83.477319,39.682352 c 0,0 -25.272207,34.302388 -22.517498,69.179468 2.023146,25.61484 24.663212,53.8693 24.663212,53.8693"
+       prop_scale="0.63612773"
+       scale_y_rel="true"
+       vertical="true"
+       hide_knot="false"
+       bendpath-nodetypes="csc" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.463207"
+     inkscape:cx="145.33056"
+     inkscape:cy="739.2066"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g909"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1331"
+     inkscape:window-height="743"
+     inkscape:window-x="35"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g950">
+      <g
+         id="g909">
+        <ellipse
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.46799999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path950"
+           cx="38.454273"
+           cy="53.169838"
+           rx="20.83835"
+           ry="30.290794" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.62485951;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 38.71501,83.078019 c 7.910165,3.970641 11.964213,11.715904 10.872551,20.172831 -0.637141,4.93582 -6.438326,10.19515 -5.255793,14.87419 1.744533,6.90278 12.573472,12.3772 21.313089,15.73838 -8.87482,-3.52703 -19.575657,-8.7009 -21.302882,-15.6171 -1.183368,-4.73847 4.657545,-9.96998 5.306091,-14.99037 C 50.737788,94.820437 46.600773,86.980988 38.71501,83.078019 Z"
+           id="path4663"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="csscssc" />
+      </g>
+    </g>
+    <path
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.28128499;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       d="m 164.22412,99.903023 c 0,42.074017 -24.8149,76.181747 -55.42564,76.181747 -30.61074,0 -55.425648,-34.10773 -55.425648,-76.181747 0,-42.074018 24.814908,-76.181748 55.425648,-76.181748 30.61074,0 55.42564,34.10773 55.42564,76.181748 z"
+       id="path10-6"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
