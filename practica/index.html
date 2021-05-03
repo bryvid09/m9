@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,25 +9,32 @@
     <script src="./globo.js"></script>
     <script src="./juego.js"></script>
     <script>
-        window.onload = function() {
+        window.onload = function () {
             let area = new gameArea();
             area.start();
-            document.onclick = function(event) {
-                area.removeBallons(event);
+            document.onclick = function (event) {
+                if (area.viewStatus == 'start') {
+                    area.removeBallons(event);
+                }
+
             }
-            document.onkeydown = function(event) {
-                if (event.keyCode == 32 && area.viewStatus == 'start') {                    
+            document.onkeydown = function (event) {
+                if (event.keyCode == 32 && area.viewStatus == 'start') {
                     area.stop();
-                } else if (event.keyCode == 32 && area.viewStatus == 'stop'){
+                } else if (event.keyCode == 32 && area.viewStatus == 'stop') {
                     area.restart();
                 } else if (event.keyCode == 65 && area.viewStatus == 'start') {
                     area.increaseDifficulty();
+                } else if (event.keyCode == 32 && area.viewStatus == 'end') {
+                    area.start();
                 }
             }
-        }        
+        }
     </script>
 </head>
+
 <body>
-    
+
 </body>
+
 </html>

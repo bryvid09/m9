@@ -1,3 +1,4 @@
+//Control game
 class gameArea {
 
     constructor() {
@@ -15,13 +16,15 @@ class gameArea {
     }
 
     start() {
+        this.contextoPanel.clearRect(0,0,800,50);        
         let contexto = this.canvas.getContext('2d');
+        contexto.clearRect(0,0,800,570);
         let backgr = new Image();
-        backgr.src = './cesped.png';        
+        backgr.src = './cesped.png';
         backgr.onload = function () {
             contexto.drawImage(backgr, 0, 500);
-            contexto.globalCompositeOperation='destination-over'
-        }        
+            contexto.globalCompositeOperation = 'destination-over'
+        }
         this.ballons = [];
         this.points = 0;
         this.minuts = 3;
@@ -47,7 +50,13 @@ class gameArea {
     }
     printTime(area) {
         area.seconds--;
-        if (area.seconds < 0) {
+        if (area.seconds == 0 && area.minuts == 0) {
+            area.stop();
+            area.contextoPanel.clearRect(0, 0, 800, 100);
+            area.contextoPanel.font = "bold 15px verdana";
+            area.contextoPanel.fillText('END GAME YOUR SCORE IS: ' + area.points, 5, 20);
+            area.contextoPanel.fillText('PRESS SPACE TO RESTART', 5, 40);
+        } else if (area.seconds < 0) {
             area.minuts--;
             area.seconds = 60;
         }
@@ -63,7 +72,11 @@ class gameArea {
     }
 
     stop() {
-        this.status = 'stop';
+        if (this.minuts == 0 && this.seconds == 0) {
+            this.status = 'end';
+        } else {
+            this.status = 'stop';
+        }
         clearInterval(this.make);
         clearInterval(this.move);
         clearInterval(this.countTime);
