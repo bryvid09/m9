@@ -40,7 +40,7 @@ class gameArea {
         this.contextoPanel.font = "bold 15px arial";
         this.contextoPanel.fillText('Key <A>: speed     Key <space>: pause/start', 225, 30);
         this.contextoPanel.font = "bold 25px verdana";
-        this.contextoPanel.fillText('Time = ' + this.minuts + ':' + this.seconds, 640, 30);
+        this.contextoPanel.fillText('Time = ' + this.minuts + ':' + this.seconds, 620, 30);
         this.contextoPanel.closePath();
         this.countTime = setInterval(this.printTime, 1000, this);
     }
@@ -60,13 +60,13 @@ class gameArea {
             area.minuts--;
             area.seconds = 60;
         }
-        area.contextoPanel.clearRect(640, 0, 200, 50);
+        area.contextoPanel.clearRect(620, 0, 200, 50);
         area.contextoPanel.beginPath();
         area.contextoPanel.font = "bold 25px verdana";
         if (area.seconds < 10) {
-            area.contextoPanel.fillText('Time = ' + area.minuts + ':0' + area.seconds, 640, 30);
+            area.contextoPanel.fillText('Time = ' + area.minuts + ':0' + area.seconds, 620, 30);
         } else {
-            area.contextoPanel.fillText('Time = ' + area.minuts + ':' + area.seconds, 640, 30);
+            area.contextoPanel.fillText('Time = ' + area.minuts + ':' + area.seconds, 620, 30);
         }
         area.contextoPanel.closePath();
     }
